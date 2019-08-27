@@ -1,0 +1,31 @@
+<div class="card">
+  <div class="card-header">
+    {{pageTitle}}
+  </div>
+  <div class="card-body">
+    <div class="table-responsive">
+        <table class="table mb-0">
+          <thead>
+            <tr >
+              <th>name</th>
+              <th>qualifucation</th>
+              <th>experiance</th>
+              <th>language</th>
+              <th></th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let employee of employees">
+              <td>{{employee.name}}</td>
+              <td>{{employee.qualification}}</td>
+              <td>{{employee.experiance}}</td>
+              <td>{{employee.languages}}</td>
+              <td><a [routerLink]="['/employees',employee.id,'edit']">Edit</a></td>
+              <td><a id="aj" (click)="deleteEmployee(employee)" >Delete</a></td>
+            </tr>
+          </tbody>
+        </table>
+    </div>
+  </div>
+</div>

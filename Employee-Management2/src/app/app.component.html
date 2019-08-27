@@ -1,0 +1,16 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<nav class='navbar navbar-expand navbar-light bg-light'>
+  <a class='navbar-brand'>{{title}}</a>
+  <ul class='navbar-nav'>
+    <li class='nav-item'><a class='nav-link' routerLinkActive='active' [routerLinkActiveOptions]="{exact: true}"
+          [routerLink]="['/employee']">Employee List</a>
+    </li>
+    <li class='nav-item'><a class='nav-link' routerLinkActive='active' [routerLinkActiveOptions]="{exact: true}"
+          [routerLink]="['/employees/0/edit']">Add Employee</a>
+    </li>
+  </ul>
+</nav>
+<div class='container'>
+<router-outlet></router-outlet>
+</div>
+
